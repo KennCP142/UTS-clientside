@@ -43,31 +43,35 @@ const TodoItem = ({ todo, onDelete, onToggle, onEdit }) => {
 
   return (
     <div className={`flex items-center gap-2 p-2 rounded-lg shadow ${todo.completed ? 'bg-green-100' : 'bg-white'}`}>
+      
+      
+      {/* Todo Text */}
       <span className={`flex-1 ${todo.completed ? 'line-through text-gray-500' : ''}`}>
         {todo.text}
       </span>
+
+      {/* Edit Button */}
       <button
         onClick={() => setIsEditing(true)}
         className="p-1 text-blue-600 hover:text-blue-800"
       >
         <Edit2 size={20} />
       </button>
+
+      {/* Delete Button */}
       <button
         onClick={() => onDelete(todo.id)}
         className="p-1 text-red-600 hover:text-red-800"
       >
         <Trash2 size={20} />
       </button>
-      <button
-        onClick={() => onToggle(todo.id)}
-        className={`px-3 py-1 rounded ${
-          todo.completed 
-            ? 'bg-green-500 text-white hover:bg-green-600' 
-            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-        }`}
-      >
-        Done
-      </button>
+
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => onToggle(todo.id)}
+        className="w-5 h-5 accent-green-500"
+      />
     </div>
   );
 };
