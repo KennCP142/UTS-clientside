@@ -62,8 +62,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <CheckCircle className="h-8 w-8 text-blue-500" />
-              <h1 className="ml-2 text-2xl font-bold text-gray-900">To Do List</h1>
+              <CheckCircle className="h-8 w-8 text-blue-300" />
+              <h1 className="ml-2 text-2xl font-bold text-white">To Do List</h1>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ function App() {
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-            Manage Your Tasks
+            Manage Tasks
           </h2>
 
           <form onSubmit={addTodo} className="mb-6">
@@ -82,7 +82,6 @@ function App() {
                 type="text"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
-                placeholder="Add a new todo..."
                 className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
@@ -151,15 +150,12 @@ function App() {
       <footer className="bg-gray-600 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <div className="text-gray-500">
+            <div className="text-white">
               © 2024. All rights reserved.
             </div>
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <Github className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-700">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-gray-700">Terms of Service</a>
+              <a href="#" className="text-white hover:text-gray-400">Privacy Policy</a>
+              <a href="#" className="text-white hover:text-gray-400">Terms of Service</a>
             </div>
           </div>
         </div>
