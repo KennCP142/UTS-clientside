@@ -58,18 +58,13 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-gray-600 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <CheckCircle className="h-8 w-8 text-blue-500" />
-              <h1 className="ml-2 text-2xl font-bold text-gray-900">TaskMaster</h1>
+              <h1 className="ml-2 text-2xl font-bold text-gray-900">To Do List</h1>
             </div>
-            <nav className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-gray-900">About</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Features</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
-            </nav>
           </div>
         </div>
       </header>
@@ -92,7 +87,7 @@ function App() {
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Add
               </button>
@@ -104,7 +99,7 @@ function App() {
               onClick={() => setFilter('all')}
               className={`px-4 py-2 rounded-lg ${
                 filter === 'all'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-purple-500 text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -114,7 +109,7 @@ function App() {
               onClick={() => setFilter('active')}
               className={`px-4 py-2 rounded-lg ${
                 filter === 'active'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-orange-500 text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -124,7 +119,7 @@ function App() {
               onClick={() => setFilter('completed')}
               className={`px-4 py-2 rounded-lg ${
                 filter === 'completed'
-                  ? 'bg-blue-500 text-white'
+                  ? 'bg-green-500 text-white'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -153,11 +148,11 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200">
+      <footer className="bg-gray-600 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="text-gray-500">
-              © 2024 TaskMaster. All rights reserved.
+              © 2024. All rights reserved.
             </div>
             <div className="flex items-center space-x-6">
               <a href="#" className="text-gray-400 hover:text-gray-500">
